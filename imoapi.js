@@ -478,14 +478,15 @@ if(!exports.Utils){
 (function(){
 	var a = exports.Utils,
 		b = exports.Transport;
-	exports.Channel = function(k, ch_id){
+	exports.Channel = function(k, ch_id, token){
 		this.id = null;
 		this.public_client_id = null;
 		this.client_token = null;
 		this.ssid = null;
 		this._debug_mode = true;
 		this.error_dict = {};
-		var l = "#";
+		token = (typeof token === "undefined") ? "" : token;
+		var l = "#" + token.substr(token.indexOf("#") + 1);
 		if(l.length > 1){
 			this.client_token = l.substr(1);
 		}
