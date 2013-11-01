@@ -8,7 +8,7 @@ Example
 
 The `IMO.Channel` constructor takes one extra parameter: the `ch_id` of the channel you're connecting to. Other than that, nothing major changes:
 
-    var IMO = require('./imoapi.js');
+    var IMO = require('imoapi');
     
     var channel = null;
     
