@@ -1,0 +1,21 @@
+{
+	"name": "imoapi",
+	"version": "0.1.0",
+	"author": {
+		"name": "Dan Hlavenka",
+		"email": "dan@xd6.co"
+	},
+	"description": "Interact with the imo.im API using Node.JS",
+	"main": "./imoapi.js",
+	"dependencies": {
+		"ws": "0.4.x"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/DanH42/imoapi-nodejs.git"
+	},
+	"license": "MIT",
+	"engines": {
+		"node": ">=0.4"
+	}
+}
