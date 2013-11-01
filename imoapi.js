@@ -92,7 +92,7 @@ exports.WS_SERVER_IP = "wss://api2-" + (Math.random() + "").substring(2) + ".imo
 if(!exports.config){
 	exports.config = {};
 }
-exports.config.debug = true;
+exports.config.debug = false;
 (function(){
 	function b(d, c){
 		return function(e){
@@ -483,7 +483,7 @@ if(!exports.Utils){
 		this.public_client_id = null;
 		this.client_token = null;
 		this.ssid = null;
-		this._debug_mode = true;
+		this._debug_mode = false;
 		this.error_dict = {};
 		token = (typeof token === "undefined") ? "" : token;
 		var l = "#" + token.substr(token.indexOf("#") + 1);
@@ -837,7 +837,6 @@ if(!exports.Utils){
 					}
 					if(f.client_token && f.client_token != c.client_token){
 						c.client_token = f.client_token;
-						console.log("Token: " + f.client_token);
 					}
 					if(f.ssid){
 						c.ssid = f.ssid;
@@ -883,7 +882,6 @@ if(!exports.Utils){
 						this.id = f.cid;
 						this.public_client_id = f.public_client_id;
 						this.client_token = f.client_token;
-						console.log("Token: " + this.client_token);
 						this.ssid = f.ssid;
 						this.connected = true;
 						this.transport.flush();
