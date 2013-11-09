@@ -922,7 +922,9 @@ if(!exports.Utils){
 			delete this.incoming_queue.heap;
 			delete this.incoming_queue;
 			delete this.callback_context;
-			this.transport.destroy();
+			if(this.transport){
+				this.transport.destroy();
+			}
 			delete this.transport;
 			delete this.connected;
 			this.disconnected = true;
