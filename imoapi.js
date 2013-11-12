@@ -738,13 +738,13 @@ if(!exports.Utils){
 							case "event_queue":
 							case "random_permutation_event_queue":
 							case "random_number_event_queue":
-								if(this.callback_context.hasOwnProperty(j)){
+								if(this.callback_context && this.callback_context.hasOwnProperty(j)){
 									this.callback_context[j](d, g);
 								}
 								break;
 						}
 					}
-					if(this.callback_context.subscribe_done){
+					if(this.callback_context && this.callback_context.subscribe_done){
 						this.callback_context.subscribe_done();
 					}
 					break;
