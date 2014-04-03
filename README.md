@@ -1,3 +1,5 @@
+*Note: The original imo.im API is no longer functional. This was only a client-side library, which means that without a server instance to connect to it's rendered fairly useless. The source is being left here in case anyone finds it interesting.*
+
 imoapi-nodejs
 =============
 
